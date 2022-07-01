@@ -1,0 +1,1196 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: local("AvenirNext"), url("../public/font/AvenirNextLTPro-Bold.otf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: local("AvenirNext"), url("../public/font/AvenirNextLTPro-lt.otf") format("truetype");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: local("AvenirNext"), url("../public/font/AvenirNextLTPro-Regular.otf") format("truetype");
+  font-weight: 500;
+}
+body {
+  height: 100vh;
+  background-color: white;
+  padding: 0%;
+  margin: 0%;
+}
+body .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+body .App .main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .App .main .word {
+  width: 70%;
+}
+body .App .image {
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .App .image .logo {
+  width: 70%;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+body .App .image .logo .first {
+  margin-right: 4%;
+}
+body .App .image .img img {
+  width: 45vw;
+}
+body .App .app {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+body .App .app .logtext {
+  font-size: 40px;
+  font-family: AvenirNext;
+  color: #213F7D;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+body .App .app .text {
+  font-size: 20px;
+  font-family: AvenirNext;
+  color: #545F7D;
+  font-weight: 500;
+  margin-bottom: 5%;
+}
+body .App .app form {
+  width: 70%;
+}
+body .App .app form .style {
+  width: 100%;
+  height: 50px;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  margin-bottom: 5%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+body .App .app form .style input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: none;
+  padding-left: 3%;
+  outline: none;
+}
+body .App .app form .style .show {
+  font-size: 12px;
+  font-family: AvenirNext;
+  color: #39CDCC;
+  font-weight: 500;
+  border: 0px;
+  position: absolute;
+  right: 2%;
+  cursor: pointer;
+}
+body .App .app form .fp {
+  font-size: 12px;
+  font-family: AvenirNext;
+  color: #39CDCC;
+  font-weight: bold;
+  margin-bottom: 5%;
+}
+body .App .app form .loginbutton {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #39CDCC;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+body .App header {
+  width: 100%;
+  margin: 0%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background-color: white;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+}
+body .App header .head {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .App header .head .dropmenu {
+  width: 80px;
+  display: none;
+}
+body .App header .head .style {
+  display: flex;
+  width: 80%;
+  height: 60%;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  justify-content: space-between;
+  border-radius: 8px;
+  overflow: hidden;
+}
+body .App header .head .style input {
+  width: 100%;
+  border: 0;
+  padding-left: 3%;
+  outline: none;
+}
+body .App header .head .style .search_icon {
+  background-color: #39CDCC;
+  display: flex;
+  align-items: center;
+}
+body .App header .head .style .search_icon img {
+  width: 15px;
+  margin: 0px 20px;
+}
+body .App header .head .profiles {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App header .head .profile {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body .App header .head .profile .bgnotice {
+  width: 25px;
+  height: 25px;
+}
+body .App header .head .profile .bgnotice img {
+  width: 100%;
+  height: 100%;
+}
+body .App header .head .profile .bgprofile {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+body .App header .head .profile .bgprofile img {
+  width: 100%;
+  height: 100%;
+}
+body .App header .head .profile .name {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: bold;
+}
+body .App header .head .profile .name p {
+  margin-right: 9px;
+}
+body .App header .head .profile .doc {
+  cursor: pointer;
+  text-decoration: underline;
+}
+body .App header .head .profile .doc:hover {
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: bold;
+}
+body .App header .homelogo {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+body .App header .homelogo img {
+  transform: scale(0.8);
+}
+body .App .nav::-webkit-scrollbar {
+  display: none;
+}
+body .App .nav {
+  width: 20vw;
+  position: fixed;
+  height: 90vh;
+  overflow: scroll;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: normal;
+  background-color: white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+}
+body .App .nav .side {
+  width: 80%;
+}
+body .App .nav .side .logout {
+  border-bottom: 2px solid rgb(244, 245, 248);
+  margin-bottom: 15px;
+}
+body .App .nav .side .log {
+  cursor: pointer;
+}
+body .App .nav .side .home {
+  display: flex;
+  align-items: center;
+  margin: 10% 0 13% 0;
+}
+body .App .nav .side .home .drop {
+  margin-right: 3%;
+}
+body .App .nav .side .home div {
+  margin-right: 3%;
+}
+body .App .nav .side .dash {
+  display: flex;
+  margin: 0% 0px 13% 0px;
+  align-items: center;
+  opacity: 0.6;
+  cursor: pointer;
+}
+body .App .nav .side .dash img {
+  margin-right: 3%;
+}
+body .App .nav .side .dash:hover {
+  opacity: 1;
+}
+body .App .nav .side .list {
+  display: flex;
+  margin-bottom: 13%;
+  align-items: center;
+  cursor: pointer;
+}
+body .App .nav .side .list img {
+  margin-right: 3%;
+}
+body .App .nav .side .head {
+  font-size: 12px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: normal;
+  margin-bottom: 10%;
+}
+body .App .mainbody::-webkit-scrollbar {
+  display: none;
+}
+body .App .mainbody {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: scroll;
+}
+body .App .mainbody .mainpart {
+  width: 73vw;
+  height: 90vh;
+}
+body .App .mainbody .mainpart .name {
+  margin: 50px 0px 40px 0px;
+}
+body .App .mainbody .mainpart .name div {
+  font-size: 24px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App .mainbody .mainpart .tablist {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}
+body .App .mainbody .mainpart .tablist span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body .App .mainbody .mainpart .tablist .tab {
+  background: white;
+  width: 90%;
+  height: 160px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+body .App .mainbody .mainpart .tablist .tab .tabbody {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+body .App .mainbody .mainpart .tablist .tab .tabbody .tabbodys {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 10%;
+}
+body .App .mainbody .mainpart .tablist .tab .tabbody .tabbodys .tabname {
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: normal;
+}
+body .App .mainbody .mainpart .tablist .tab .tabbody .tabbodys .tabno {
+  font-size: 24px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: normal;
+}
+body .App .mainbody .mainpart .tablist .tab .tabbody img {
+  width: 52px;
+}
+body .App .mainbody .mainpart .table {
+  background: white;
+  height: 640px;
+  width: 95%;
+  margin-top: 35px;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+body .App .mainbody .mainpart .table .tablelist {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists {
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #545F7D;
+  font-weight: normal;
+  align-items: center;
+  height: 60px;
+  border-top: rgba(33, 63, 125, 0.1) solid 1px;
+  border-bottom: rgba(33, 63, 125, 0.1) solid 1px;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists div {
+  width: 90%;
+  overflow: hidden;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed {
+  position: absolute;
+  right: -10px;
+  bottom: -30px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form {
+  width: 270px;
+  height: 600px;
+  background: #FFFFFF;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit input, body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit div {
+  width: 98px;
+  height: 40px;
+  color: #545F7D;
+  background-color: white;
+  border: 1px solid #545F7D;
+  border-radius: 8px;
+  cursor: pointer;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit input:hover, body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit div:hover {
+  color: white;
+  background-color: #39CDCC;
+  border: 0;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .header {
+  margin-bottom: 10px;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .inputstyle {
+  background: #FFFFFF;
+  border: 1px solid rgb(222, 226, 235);
+  outline: none;
+  border-radius: 8px;
+  width: 90%;
+  overflow: visible;
+  height: 40px;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #545F7D;
+  font-weight: normal;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .smallmenu {
+  background-color: white;
+  border: 1px solid rgba(84, 95, 125, 0.04);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  height: 130px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: normal;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .smallmenu .menubody {
+  width: 100%;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .smallmenu div {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0px 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .smallmenu div img {
+  margin-right: 5px;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .email {
+  width: 180%;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .touch {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .App .mainbody .mainpart .table .tablelist .tablelists .touch section {
+  padding: 5px 5px;
+  display: flex;
+  font-size: 100%;
+  border-radius: 100px;
+}
+body .App .mainbody .mainpart .table .tables {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 13%;
+  align-content: center;
+}
+body .App .mainbody .mainpart .table .tablehead {
+  display: flex;
+  font-size: 12px;
+  font-family: "Work Sans";
+  color: #545F7D;
+  font-weight: bold;
+  align-items: center;
+  width: 90%;
+}
+body .App .mainbody .mainpart .table .tablehead div {
+  margin-right: 15px;
+}
+body .App .mainbody .mainpart .table .tableemail {
+  display: flex;
+  font-size: 12px;
+  font-family: "Work Sans";
+  color: #545F7D;
+  font-weight: bold;
+  align-items: center;
+  width: 150%;
+}
+body .App .mainbody .mainpart .table .tableemail div {
+  margin-right: 15px;
+}
+body .App .mainbody .mainpart .section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+body .App .mainbody .mainpart .foot {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+body .App .mainbody .mainpart .foot .show {
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #545F7D;
+  font-weight: normal;
+}
+body .App .mainbody .mainpart .foot .show select {
+  background: rgba(33, 63, 125, 0.1);
+  border-radius: 4px;
+  width: 15%;
+  height: 70%;
+  margin: 0px 10px;
+  border: 0;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App .mainbody .mainpart .foot .limit {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-around;
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: normal;
+}
+body .App .mainbody .mainpart .foot .limit .click {
+  opacity: 0.6;
+  cursor: pointer;
+}
+body .App .mainbody .mainpart .foot .limit .click:hover {
+  opacity: 1;
+}
+body .App .mainbody .mainpart .foot .limit .left {
+  transform: rotate(180deg);
+  cursor: pointer;
+  opacity: 0.6;
+}
+body .App .mainbody .mainpart .foot .limit .left:hover {
+  opacity: 1;
+}
+body .App .mainbody .mainpart .foot .limit .right {
+  cursor: pointer;
+  opacity: 0.6;
+}
+body .App .mainbody .mainpart .foot .limit .right:hover {
+  opacity: 1;
+}
+body .App .Profile::-webkit-scrollbar {
+  display: none;
+}
+body .App .Profile {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: scroll;
+}
+body .App .Profile .mainpart {
+  width: 73vw;
+  height: 90vh;
+}
+body .App .Profile .mainpart .section {
+  width: 90%;
+}
+body .App .Profile .mainpart .section .topbody {
+  margin-top: 20px;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+body .App .Profile .mainpart .section .topbody .downbody {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: normal;
+}
+body .App .Profile .mainpart .section .topbody .downbody .mainside {
+  text-decoration: underline;
+  color: #39CDCC;
+}
+body .App .Profile .mainpart .section .topbody .downbody div {
+  cursor: pointer;
+}
+body .App .Profile .mainpart .section .topbody .downbody div:hover {
+  text-decoration: underline;
+  color: #39CDCC;
+}
+body .App .Profile .mainpart .section .topbody .topcollect {
+  display: flex;
+  padding: 20px 0px 50px 0px;
+}
+body .App .Profile .mainpart .section .topbody .topcollect img {
+  width: 100px;
+  height: 100px;
+  margin: 0px 2%;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .name h3 {
+  margin: 0px 0px 10px 0px;
+  font-size: 22px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .name h5 {
+  margin: 0%;
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 400;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .ut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #545F7D;
+  border-right: 1px solid #545F7D;
+  margin: 0px 20px;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .ut h4 {
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 40px;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .ut div {
+  margin: 0%;
+  display: flex;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .acc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .acc h4 {
+  margin: 0px 0px 10px 0px;
+  font-size: 22px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App .Profile .mainpart .section .topbody .topcollect .acc div {
+  margin: 0%;
+  font-size: 12px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 400;
+}
+body .App .Profile .mainpart .section .profileb {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+body .App .Profile .mainpart .section .profileb .pb {
+  width: 90%;
+}
+body .App .Profile .mainpart .section .profileb .pbody .profiletitle {
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+  margin: 25px 0px 35px 0px;
+}
+body .App .Profile .mainpart .section .profileb .pbody .run {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid rgb(244, 245, 248);
+}
+body .App .Profile .mainpart .section .profileb .pbody .run .runbody {
+  margin-right: 65px;
+  padding-bottom: 40px;
+}
+body .App .Profile .mainpart .section .profileb .pbody .run .bodytitle {
+  font-size: 12px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 400;
+  padding-bottom: 12px;
+}
+body .App .Profile .mainpart .section .profileb .pbody .run .bodyname {
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App .Profile .mainpart .direct {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 400;
+  margin-top: 50px;
+  cursor: pointer;
+}
+body .App .Profile .mainpart .direct img {
+  margin-right: 20px;
+}
+body .App .Profile .mainpart .direct:hover {
+  font-size: 16px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App .Profile .mainpart .userdetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+body .App .Profile .mainpart .userdetail h1 {
+  font-size: 24px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: 500;
+}
+body .App .Profile .mainpart .userdetail .button {
+  display: flex;
+}
+body .App .Profile .mainpart .userdetail .button .button1, body .App .Profile .mainpart .userdetail .button .button2 {
+  margin-right: 15px;
+  border: 1px solid;
+  font-size: 14px;
+  font-family: "Work Sans";
+  color: #213F7D;
+  font-weight: normal;
+  border-radius: 8px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  cursor: pointer;
+}
+body .App .Profile .mainpart .userdetail .button .button1 {
+  border: 1px solid #E4033B;
+  color: #E4033B;
+}
+body .App .Profile .mainpart .userdetail .button .button2 {
+  border: 1px solid #39CDCC;
+  color: #39CDCC;
+}
+
+@media only screen and (max-width: 1280px) {
+  body .App .image .img img {
+    width: 60vw;
+  }
+}
+@media only screen and (max-height: 450px) {
+  body .App .image .img img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  body {
+    height: 100%;
+  }
+  body .App {
+    overflow-y: scroll;
+    height: 100%;
+  }
+  body .App header .profiles .profile .bgprofile {
+    width: 20px;
+    height: 20px;
+  }
+  body .App .app {
+    flex-direction: column;
+  }
+  body .App .image {
+    height: 30vh;
+    margin-bottom: 30vh;
+  }
+  body .App .image .logo {
+    margin-top: 40px;
+  }
+  body .App .image .img img {
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 940px) {
+  body .App .mainbody .mainpart .tablist span .tab .tabbody .tabbodys .tabname {
+    font-size: 11px;
+  }
+  body .App .mainbody .mainpart .tablist span .tab .tabbody .tabbodys .tabno {
+    font-size: 15px;
+  }
+  body .App .mainbody .mainpart .table .tablelist .tablelists {
+    font-size: 10px;
+  }
+  body .App .mainbody .mainpart .table .tables .tablehead div {
+    font-size: 10px;
+  }
+  body .App .mainbody .mainpart .table .tables .tablehead img {
+    display: none;
+  }
+  body .App .mainbody .mainpart .table .tables .tableemail {
+    width: 100%;
+  }
+  body .App .mainbody .mainpart .table .tables .tableemail div {
+    font-size: 10px;
+  }
+  body .App .mainbody .mainpart .table .tables .tableemail img {
+    display: none;
+  }
+  body .App header .head .profiles .profile {
+    width: 80%;
+  }
+  body .App .nav .side {
+    font-size: 12px;
+  }
+  body .App .Profile .mainpart .section .profileb .pb .pbody .run .runbody {
+    padding-bottom: 15px;
+    margin-right: 25px;
+  }
+  body .App .Profile .mainpart .section .profileb .pb .pbody .run .runbody .bodytitle {
+    font-size: 10px;
+  }
+  body .App .Profile .mainpart .section .profileb .pb .pbody .run .runbody .bodyname {
+    font-size: 12px;
+  }
+  body .App .Profile .mainpart .section .userdetail h1 {
+    font-size: 17px;
+  }
+  body .App .Profile .mainpart .section .userdetail .button .button1, body .App .Profile .mainpart .section .userdetail .button .button2 {
+    width: 100px;
+    height: 30px;
+    font-size: 10px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect img {
+    width: 50px;
+    height: 50px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect .name h3 {
+    font-size: 14px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect .name h5 {
+    font-size: 10px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect .ut h4 {
+    font-size: 10px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect .acc h4 {
+    font-size: 14px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect .acc div {
+    font-size: 7px;
+  }
+  body .App .Profile .mainpart .section .topbody .downbody {
+    font-size: 11px;
+  }
+  body .App .app {
+    flex-direction: column;
+  }
+  body .App .image {
+    height: 30vh;
+    margin-bottom: 10vh;
+  }
+  body .App .image .img img {
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body .App .mainbody {
+    justify-content: center;
+  }
+  body .App .mainbody .mainpart {
+    width: 97%;
+  }
+  body .App .mainbody .mainpart .section {
+    margin-top: 15px;
+  }
+  body .App .mainbody .mainpart .section .foot {
+    height: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  body .App .mainbody .mainpart .section .foot .show {
+    justify-content: center;
+    font-size: 12px;
+  }
+  body .App .mainbody .mainpart .section .foot .show select {
+    font-size: 12px;
+    margin: 0px 30px;
+    width: 20%;
+    height: 50%;
+  }
+  body .App .mainbody .mainpart .section .foot .limit {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+  body .App .mainbody .mainpart .section .foot .limit .left img, body .App .mainbody .mainpart .section .foot .limit .right img {
+    width: 14px;
+  }
+  body .App .mainbody .mainpart .section .foot .limit .click {
+    font-size: 12px;
+  }
+  body .App .mainbody .mainpart .tablist {
+    width: 100%;
+  }
+  body .App .mainbody .mainpart .table {
+    width: 100%;
+  }
+  body .App .mainbody .mainpart .table .tables .tableemail {
+    display: none;
+  }
+  body .App .mainbody .mainpart .table .tables #date {
+    display: none;
+  }
+  body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form {
+    width: 190px;
+  }
+  body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit div, body .App .mainbody .mainpart .table .tablelist .tablelists .fixed .form .input .submit input {
+    height: 30px;
+    width: 70px;
+  }
+  body .App .mainbody .mainpart .table .tablelist .tablelists .email {
+    display: none;
+  }
+  body .App .mainbody .mainpart .table .tablelist .tablelists #data2 {
+    display: none;
+  }
+  body .App .Profile {
+    justify-content: center;
+  }
+  body .App .Profile .mainpart {
+    width: 97%;
+  }
+  body .App .Profile .mainpart .section {
+    width: 100%;
+  }
+  body .App .Profile .mainpart .section .userdetail {
+    flex-direction: column;
+  }
+  body .App .Profile .mainpart .section .topbody .downbody {
+    font-size: 9px;
+  }
+  body .App .Profile .mainpart .section .profileb .pb .pbody .profiletitle {
+    font-size: 12px;
+  }
+  body .App .Profile .mainpart .section .profileb .pb .pbody .run .runbody {
+    margin-right: 40px;
+  }
+  body .App .Profile .mainpart .section .profileb .pb .pbody .run .runbody .bodytitle {
+    font-size: 8px;
+  }
+  body .App .Profile .mainpart .section .profileb .pb .pbody .run .runbody .bodyname {
+    font-size: 10px;
+  }
+  body .App .nav {
+    display: none;
+  }
+  body .App header .head .style {
+    display: none;
+  }
+  body .App header .head .profile {
+    display: none;
+  }
+  body .App header .head .dropmenu {
+    display: block;
+  }
+  body .menufixed::-webkit-scrollbar {
+    display: none;
+  }
+  body .menufixed {
+    position: fixed;
+    background-color: #FFFFFF;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  body .menufixed .menu_body {
+    width: 95%;
+    height: 90%;
+  }
+  body .menufixed .menu_body .profiles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-family: "Work Sans";
+    color: #213F7D;
+    font-weight: 500;
+  }
+  body .menufixed .menu_body .profile {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .menufixed .menu_body .profile .bgnotice {
+    width: 25px;
+    height: 25px;
+  }
+  body .menufixed .menu_body .profile .bgnotice img {
+    width: 100%;
+    height: 100%;
+  }
+  body .menufixed .menu_body .profile .bgprofile {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  body .menufixed .menu_body .profile .bgprofile img {
+    width: 100%;
+    height: 100%;
+  }
+  body .menufixed .menu_body .profile .name {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Work Sans";
+    color: #213F7D;
+    font-weight: bold;
+  }
+  body .menufixed .menu_body .profile .name p {
+    margin-right: 9px;
+  }
+  body .menufixed .menu_body .profile .doc {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  body .menufixed .menu_body .profile .doc:hover {
+    font-size: 14px;
+    font-family: "Work Sans";
+    color: #213F7D;
+    font-weight: bold;
+  }
+  body .menufixed .side {
+    width: 80%;
+  }
+  body .menufixed .side .logout {
+    border-bottom: 2px solid rgb(244, 245, 248);
+    margin-bottom: 15px;
+  }
+  body .menufixed .side .log {
+    cursor: pointer;
+  }
+  body .menufixed .side .home {
+    display: flex;
+    align-items: center;
+    margin: 10% 0 13% 0;
+  }
+  body .menufixed .side .home .drop {
+    margin-right: 3%;
+  }
+  body .menufixed .side .home div {
+    margin-right: 3%;
+  }
+  body .menufixed .side .dash {
+    display: flex;
+    margin: 0% 0px 13% 0px;
+    align-items: center;
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  body .menufixed .side .dash img {
+    margin-right: 3%;
+  }
+  body .menufixed .side .list {
+    display: flex;
+    margin-bottom: 8%;
+    align-items: center;
+    cursor: pointer;
+  }
+  body .menufixed .side .list img {
+    margin-right: 3%;
+  }
+  body .menufixed .side .head {
+    font-size: 12px;
+    font-family: "Work Sans";
+    color: #213F7D;
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body .App .mainbody .mainpart .table .tables #org {
+    display: none;
+  }
+  body .App .mainbody .mainpart .table .tablelist .tablelists #data3 {
+    display: none;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect .ut {
+    margin: 10px 0px;
+  }
+  body .App .Profile .mainpart .section .topbody .topcollect .acc {
+    align-items: center;
+  }
+  body .App .Profile .mainpart .section .topbody .downbody {
+    flex-wrap: wrap;
+  }
+  body .App .Profile .mainpart .section .topbody .downbody div {
+    margin: 3px 0px;
+  }
+}/*# sourceMappingURL=App.css.map */
