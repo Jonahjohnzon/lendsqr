@@ -30,7 +30,7 @@ const Loginpage = () => {
       <div className='image'>
          <div className='logo'>
             <img src='/Union.png' className='first'/>
-            <img src='../public/lendsqr.png'/>
+            <img src='/lendsqr.png'/>
          </div>
       <div className='img'>
             <img src='/Log.png'/>

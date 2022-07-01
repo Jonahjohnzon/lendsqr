@@ -37,9 +37,9 @@ const Menu = () => {
             <div className='profiles'>
                 <div className='profile'>
                 <div className='doc'><p>Docs</p></div>
-                <div className='bgnotice'><img src='/public/Notice.png'/></div>
-                <div className='bgprofile'><img src='/public/profile.png'/></div> 
-                <div className='name'><p>Adedeji</p><img src='/public/drop.png'/></div>
+                <div className='bgnotice'><img src='/Notice.png'/></div>
+                <div className='bgprofile'><img src='/profile.png'/></div> 
+                <div className='name'><p>Adedeji</p><img src='/drop.png'/></div>
                 </div>
             </div>
             <div className='side'>

@@ -101,7 +101,7 @@ function Listtable({ data,setfliter}) {
       <div className='email'>{data.email}</div>
       <div>{data.phone}</div>
       <div id='data2'>{data.date}</div>
-      <section className='touch'><section style={{ color: color, backgroundColor: colors }}>{body}</section><img src='/public/Logos/touch.png' style={{ cursor: 'pointer' }} onClick={() => {
+      <section className='touch'><section style={{ color: color, backgroundColor: colors }}>{body}</section><img src='/Logos/touch.png' style={{ cursor: 'pointer' }} onClick={() => {
         Load(display)
       }} /></section>
       <div className='fixed' style={{ display: styles }}>
